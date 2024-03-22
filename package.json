@@ -1,0 +1,47 @@
+{
+  "name": "react-is-keyboard-user",
+  "version": "1.0.0",
+  "author": "David Bishop",
+  "description": ".",
+  "license": "MIT",
+  "keywords": [
+    "detect",
+    "detection",
+    "keyboard",
+    "accessibility",
+    "mouse",
+    "react",
+    "hook"
+  ],
+  "main": "./build/index.js",
+  "types": "./build/index.js",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/dBish6/lodash-debounce-tiny.git"
+  },
+  "bugs": {
+    "url": "https://github.com/dBish6/lodash-debounce-tiny/issues"
+  },
+  "homepage": "https://github.com/dBish6/lodash-debounce-tiny#readme",
+  "scripts": {
+    "test": "jest",
+    "build": "tsc",
+    "clean": "rm -rf node_modules"
+  },
+  "peerDependencies": {
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0"
+  },
+  "devDependencies": {
+    "@testing-library/react": "^14.2.2",
+    "@types/jest": "^29.5.12",
+    "@types/react": "^18.2.67",
+    "jest": "^29.7.0",
+    "jest-environment-jsdom": "^29.7.0",
+    "ts-jest": "^29.1.2",
+    "typescript": "^5.3.3"
+  },
+  "files": [
+    "build"
+  ]
+}
