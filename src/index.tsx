@@ -14,43 +14,50 @@ const IsKeyboardUserContext = createContext<
 export const IsKeyboardUserProvider: React.FC<
   React.PropsWithChildren<{ state?: boolean }>
 > = ({ children, state }) => {
-  const isKeyboardUserRef = useRef(false),
+  const isAppLoaded = useRef(false),
+    isKeyboardUserRef = useRef(false),
     [isKeyboardUser, setIsKeyboardUser] = useState(false),
     keys = [" ", "Tab", "ArrowUp", "ArrowDown", "ArrowLeft", "ArrowRight"];
 
-  const isAppLoaded = useRef(false);
+  const createOverlay = () => {
+    const element = document.createElement("div");
+    element.role = "presentation";
+    element.id = "mouseListener";
+    element.style.cssText =
+      "position: fixed; inset: 0; width: 100%; height: 100%; z-index: 9999; background: transparent;";
+    document.body.appendChild(element);
+
+    return element;
+  };
+
+  const changeValue = (state: boolean | undefined, bool: boolean) =>
+    state ? setIsKeyboardUser(bool) : (isKeyboardUserRef.current = bool);
+
   useEffect(() => {
     if (!isAppLoaded.current) {
       let overlay: HTMLDivElement;
       const handleIfKeyboard = (e: KeyboardEvent) => {
           if (keys.includes(e.key)) {
-            state
-              ? setIsKeyboardUser(true)
-              : (isKeyboardUserRef.current = true);
+            changeValue(state, true);
 
-            overlay = document.createElement("div");
-            overlay.role = "presentation";
-            overlay.id = "mouseListener";
-            overlay.style.cssText =
-              "position: fixed; inset: 0; width: 100%; height: 100%; z-index: 9999; background: transparent;";
-            document.body.appendChild(overlay);
+            overlay = createOverlay();
 
             document.removeEventListener("keydown", handleIfKeyboard);
             overlay.addEventListener("mousedown", handleIfMouse);
           }
         },
         handleIfMouse = () => {
-          document.body.removeChild(overlay);
-
-          state
-            ? setIsKeyboardUser(false)
-            : (isKeyboardUserRef.current = false);
+          changeValue(state, false);
 
           overlay.removeEventListener("mousedown", handleIfMouse);
+          document.body.removeChild(overlay);
+
           document.addEventListener("keydown", handleIfKeyboard);
         };
 
+      // Initial Listener
       document.addEventListener("keydown", handleIfKeyboard);
+
       return () => {
         document.removeEventListener("keydown", handleIfKeyboard);
         if (overlay) {
