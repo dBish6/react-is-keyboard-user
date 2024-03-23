@@ -28,19 +28,31 @@
   "homepage": "https://github.com/dBish6/react-is-keyboard-user#readme",
   "scripts": {
     "test": "jest",
-    "build": "tsc",
+    "build": "rollup -c",
     "clean": "rm -rf node_modules"
+  },
+  "dependencies": {
+    "tslib": "^2.6.2"
   },
   "peerDependencies": {
     "react": "^18.2.0",
     "react-dom": "^18.2.0"
   },
   "devDependencies": {
+    "@babel/core": "^7.24.3",
+    "@babel/preset-env": "^7.24.3",
+    "@babel/preset-react": "^7.24.1",
+    "@rollup/plugin-babel": "^6.0.4",
+    "@rollup/plugin-commonjs": "^25.0.7",
+    "@rollup/plugin-node-resolve": "^15.2.3",
+    "@rollup/plugin-terser": "^0.4.4",
+    "@rollup/plugin-typescript": "^11.1.6",
     "@testing-library/react": "^14.2.2",
     "@types/jest": "^29.5.12",
     "@types/react": "^18.2.67",
     "jest": "^29.7.0",
     "jest-environment-jsdom": "^29.7.0",
+    "rollup": "^2.79.1",
     "ts-jest": "^29.1.2",
     "typescript": "^5.3.3"
   },

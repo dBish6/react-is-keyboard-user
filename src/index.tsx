@@ -91,5 +91,3 @@ export const useIsKeyboardUser = () => {
 
   return context;
 };
-
-export default useIsKeyboardUser;

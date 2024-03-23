@@ -1,8 +1,8 @@
 {
   "compilerOptions": {
     "target": "ES5",
-    "lib": ["dom", "dom.iterable", "ES2015"],
-    "module": "CommonJS",
+    "lib": ["dom", "dom.iterable", "ES2020"],
+    "module": "ESNext",
     "moduleResolution": "Node",
     "skipLibCheck": true,
     "declaration": true,
