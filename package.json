@@ -16,8 +16,8 @@
     "ref",
     "state"
   ],
-  "main": "./build/index.js",
-  "types": "./build/index.js",
+  "main": "./build/bundle.js",
+  "types": "./build/index.d.ts",
   "repository": {
     "type": "git",
     "url": "git+https://github.com/dBish6/react-is-keyboard-user.git"
@@ -40,8 +40,10 @@
   },
   "devDependencies": {
     "@babel/core": "^7.24.3",
+    "@babel/plugin-transform-runtime": "^7.24.3",
     "@babel/preset-env": "^7.24.3",
     "@babel/preset-react": "^7.24.1",
+    "@babel/runtime": "^7.24.1",
     "@rollup/plugin-babel": "^6.0.4",
     "@rollup/plugin-commonjs": "^25.0.7",
     "@rollup/plugin-node-resolve": "^15.2.3",

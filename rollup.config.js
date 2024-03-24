@@ -15,7 +15,7 @@ export default {
   plugins: [
     resolve(),
     commonjs(),
-    typescript(),
+    typescript({ declaration: true, declarationDir: "./build" }),
     babel({
       babelHelpers: "runtime",
       presets: ["@babel/preset-env", "@babel/preset-react"],
