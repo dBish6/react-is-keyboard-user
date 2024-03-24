@@ -39,13 +39,13 @@ function App() {
   const { isKeyboardUserRef } = useIsKeyboardUser();
 
   return (
-    <p
+    <button
       onClick={() =>
-        isKeyboardUserRef ? console.log("keyboard") : console.log("mouse") // useRef version use case.
+        isKeyboardUserRef.current ? console.log("keyboard") : console.log("mouse") // useRef version use case.
       }
     >
       Keyboard detection!
-    </p>
+    </button>
   );
 }
 
