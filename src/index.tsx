@@ -17,7 +17,7 @@ export const IsKeyboardUserProvider: React.FC<
   const isAppLoaded = useRef(false),
     isKeyboardUserRef = useRef(false),
     [isKeyboardUser, setIsKeyboardUser] = useState(false),
-    keys = [" ", "Tab", "ArrowUp", "ArrowDown", "ArrowLeft", "ArrowRight"];
+    keys = new Set([ " ", "Tab", "ArrowUp", "ArrowDown", "ArrowLeft", "ArrowRight"]); // prettier-ignore
 
   const createOverlay = () => {
     const element = document.createElement("div");
@@ -37,7 +37,7 @@ export const IsKeyboardUserProvider: React.FC<
     if (!isAppLoaded.current) {
       let overlay: HTMLDivElement;
       const handleIfKeyboard = (e: KeyboardEvent) => {
-          if (keys.includes(e.key)) {
+          if (keys.has(e.key)) {
             changeValue(state, true);
 
             overlay = createOverlay();

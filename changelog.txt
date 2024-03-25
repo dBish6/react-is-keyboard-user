@@ -1,2 +1,5 @@
 v1.0.1
 - Better README wording.
+
+v1.0.2
+- keys is now a Set for better retrieval.
