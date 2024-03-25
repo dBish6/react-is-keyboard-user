@@ -3,3 +3,6 @@ v1.0.1
 
 v1.0.2
 - keys is now a Set for better retrieval.
+
+v1.0.4
+- Overlay removal unmount fix.

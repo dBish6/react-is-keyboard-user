@@ -1,6 +1,6 @@
 {
   "name": "react-user-input-detection",
-  "version": "1.0.2",
+  "version": "1.0.4",
   "author": "David Bishop",
   "description": "A lightweight React hook to effortlessly detect keyboard or mouse usage.",
   "license": "MIT",

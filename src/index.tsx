@@ -61,8 +61,8 @@ export const IsKeyboardUserProvider: React.FC<
       return () => {
         document.removeEventListener("keydown", handleIfKeyboard);
         if (overlay) {
-          document.body.removeChild(overlay);
           overlay.removeEventListener("mousedown", handleIfMouse);
+          document.body.removeChild(overlay);
         }
       };
     }
