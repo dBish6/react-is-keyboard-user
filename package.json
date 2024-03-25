@@ -1,8 +1,8 @@
 {
-  "name": "react-is-keyboard-user",
-  "version": "1.0.0",
+  "name": "react-user-input-detection",
+  "version": "1.0.1",
   "author": "David Bishop",
-  "description": "A lightweight React hook to effortlessly detect keyboard usage.",
+  "description": "A lightweight React hook to effortlessly detect keyboard or mouse usage.",
   "license": "MIT",
   "keywords": [
     "detect",
@@ -20,12 +20,12 @@
   "types": "./build/index.d.ts",
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/dBish6/react-is-keyboard-user.git"
+    "url": "git+https://github.com/dBish6/react-user-input-detection.git"
   },
   "bugs": {
-    "url": "https://github.com/dBish6/react-is-keyboard-user/issues"
+    "url": "https://github.com/dBish6/react-user-input-detection/issues"
   },
-  "homepage": "https://github.com/dBish6/react-is-keyboard-user#readme",
+  "homepage": "https://github.com/dBish6/react-user-input-detection#readme",
   "scripts": {
     "test": "jest",
     "build": "rollup -c",
