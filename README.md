@@ -1,9 +1,9 @@
-# react-is-keyboard-user
-A lightweight React hook for detecting keyboard usage within a web application. This package provides a simple way to track whether a user is interacting via a keyboard or mouse, enhancing accessibility and the user experience of your application. The package also includes a context provider necessary for the hook's functionality. Regardless of whether the user begins with a keyboard and later transitions to a mouse, the hook dynamically detects these changes, recognizing the user's input method as mouse-based. This monitoring ensures accurate tracking of user interaction.
+# react-user-input-detection
+A lightweight React hook for detecting the user's input method within a web application. This package provides a simple way to track whether a user is interacting via a keyboard or mouse, enhancing accessibility and the user experience of your application. The package also includes a context provider necessary for the hook's functionality. Regardless of whether the user begins with a keyboard and later transitions to a mouse, the hook dynamically detects these changes, recognizing the user's input method as mouse-based. This monitoring ensures accurate tracking of user interaction.
 
 ## Installation
 ```
-$ npm i react-is-keyboard-user
+$ npm i react-user-input-detection
 ```
 
 ## Explanation
@@ -12,7 +12,7 @@ To utilize the hook, you must set up the context provider. The hook provides `is
 ### Provider
 ```
 ...
-import { IsKeyboardUserProvider } from "react-is-keyboard-user";
+import { IsKeyboardUserProvider } from "react-user-input-detection";
 
 ReactDOM.createRoot(document.getElementById("root")).render(
   <IsKeyboardUserProvider> // Uses the useRef version.
@@ -22,7 +22,7 @@ ReactDOM.createRoot(document.getElementById("root")).render(
 ```
 ```
 ...
-import { IsKeyboardUserProvider } from "react-is-keyboard-user";
+import { IsKeyboardUserProvider } from "react-user-input-detection";
 
 ReactDOM.createRoot(document.getElementById("root")).render(
   <IsKeyboardUserProvider state> // Uses the useState version.
@@ -33,7 +33,7 @@ ReactDOM.createRoot(document.getElementById("root")).render(
 
 ### Hook
 ```
-import { useIsKeyboardUser } from "react-is-keyboard-user";
+import { useIsKeyboardUser } from "react-user-input-detection";
 
 function App() {
   const { isKeyboardUserRef } = useIsKeyboardUser();
@@ -50,10 +50,9 @@ function App() {
 }
 
 export default App;
-
 ```
 ```
-import { useIsKeyboardUser } from "react-is-keyboard-user";
+import { useIsKeyboardUser } from "react-user-input-detection";
 
 function App() {
   const { isKeyboardUser } = useIsKeyboardUser();
@@ -62,7 +61,6 @@ function App() {
 }
 
 export default App;
-
 ```
 
 ## Contributing
@@ -82,7 +80,7 @@ $ npm run dev
 ```
 
 ## License
-This project is licensed under the [MIT](https://github.com/dBish6/detect-if-mobile/blob/master/LICENSE) License.
+This project is licensed under the [MIT](https://github.com/dBish6/react-user-input-detection/blob/master/LICENSE) License.
 
 ## Support Me
 If you find this package helpful consider buying me a coffee, your support helps me stay motivated!
